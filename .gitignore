@@ -20,6 +20,7 @@ binaries
 *~
 *.o
 *.so
+*.dll
 
 *chain.csv
 *infection_histories.csv
