@@ -34,7 +34,7 @@ get_DOBs <- function(titre_dat){
     DOBs <- unique(titre_dat[,c("individual","DOB")])
 }
 
-#' Get number alive bylocation
+#' Get number alive by location
 #'
 #' Given the titre_dat data frame with entries for location, calculates the number that are alive (alive to be infected, that is) for each time in times by location
 #' @param titre_dat the data frame of titre data. See \code{\link{example_titre_dat}}
@@ -454,7 +454,7 @@ generate_antigenic_map <- function(antigenic_distances, buckets = 1, spar = 0.3)
   ## 2. PE2009 is like the strain circulating in 2010
   virus_key <- c(
     "HK68" = 1968, "EN72" = 1972, "VI75" = 1975, "TX77" = 1977, "BK79" = 1979, "SI87" = 1987, "BE89" = 1989, "BJ89" = 1989,
-    "BE92" = 1992, "WU95" = 1995, "SY97" = 1997, "FU02" = 2002, "CA04" = 2004, "WI05" = 2005, "PE06" = 2006
+    "BE92" = 1992, "WU95" = 1995, "SY97" = 1997, "FU02" = 2002, "CA04" = 2004, "WI05" = 2005, "PE06" = 2009
   ) * buckets
   antigenic_distances$Strain <- virus_key[antigenic_distances$Strain]
   fit <- smooth.spline(antigenic_distances$X, antigenic_distances$Y, spar = spar)
