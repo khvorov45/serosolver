@@ -12,10 +12,13 @@ strain_years <- c(
 )
 
 strain_years <- data.frame(
-  strain = names(strain_years), year = strain_years, stringsAsFactors = FALSE
+  strain = names(strain_years), epoch = as.integer(strain_years),
+  epochs_per_year = 1L, stringsAsFactors = FALSE
 )
 rownames(strain_years) <- NULL
 
 fonville_map <- dplyr::left_join(fonville_map, strain_years, by = "strain")
+
+fonville_map <- tibble::as_tibble(fonville_map)
 
 usethis::use_data(fonville_map, overwrite = TRUE)

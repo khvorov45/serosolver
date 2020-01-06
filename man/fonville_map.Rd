@@ -14,7 +14,10 @@
 
   \item{y}{Y-coordinate}
 
-  \item{year}{The year the strain circulated}
+  \item{epoch}{The epoch the strain circulated. Since there is 1 epoch per
+  year, this is the same as year.}
+
+  \item{epochs_per_year}{Number of epochs per year.}
 
   }}
 \usage{

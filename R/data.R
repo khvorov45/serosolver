@@ -8,15 +8,17 @@
 #'
 #'   \item{individual}{Subject index}
 #'
-#'   \item{sample}{Sample time index}
+#'   \item{sample_epoch}{Sample epoch index}
 #'
-#'   \item{virus}{Virus circulation time index}
+#'   \item{virus_epoch}{Virus circulation epoch index}
 #'
-#'   \item{titre}{Log titre}
+#'   \item{epochs_per_year}{Number of epochs per year}
+#'
+#'   \item{logtitre}{Log titre}
 #'
 #'   \item{run}{Measurement index}
 #'
-#'   \item{dob}{Date of birth time index}
+#'   \item{birth_epoch}{Epoch of birth index}
 #'
 #'   \item{group}{Group index}
 #'
@@ -62,7 +64,10 @@
 #'
 #'   \item{y}{Y-coordinate}
 #'
-#'   \item{year}{The year the strain circulated}
+#'   \item{epoch}{The epoch the strain circulated. Since there is 1 epoch per
+#'   year, this is the same as year.}
+#'
+#'   \item{epochs_per_year}{Number of epochs per year.}
 #'
 #'   }
 "fonville_map"

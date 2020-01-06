@@ -3,4 +3,5 @@
 export(smooth_antigenic_map)
 importFrom(Rcpp,sourceCpp)
 importFrom(stats,smooth.spline)
+importFrom(tibble,is_tibble)
 useDynLib(serosolver, .registration = TRUE)
