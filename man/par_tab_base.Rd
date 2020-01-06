@@ -8,9 +8,9 @@
 
   \describe{
 
-  \item{names}{Parameter name}
+  \item{name}{Parameter name}
 
-  \item{values}{Parameter value}
+  \item{value}{Parameter value}
 
   \item{fixed}{1 - fixed, 0 - needs to be estimated}
 

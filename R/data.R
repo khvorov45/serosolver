@@ -8,7 +8,7 @@
 #'
 #'   \item{individual}{Subject index}
 #'
-#'   \item{samples}{Sample time index}
+#'   \item{sample}{Sample time index}
 #'
 #'   \item{virus}{Virus circulation time index}
 #'
@@ -16,7 +16,7 @@
 #'
 #'   \item{run}{Measurement index}
 #'
-#'   \item{DOB}{Date of birth time index}
+#'   \item{dob}{Date of birth time index}
 #'
 #'   \item{group}{Group index}
 #'
@@ -29,9 +29,9 @@
 #'
 #'   \describe{
 #'
-#'   \item{names}{Parameter name}
+#'   \item{name}{Parameter name}
 #'
-#'   \item{values}{Parameter value}
+#'   \item{value}{Parameter value}
 #'
 #'   \item{fixed}{1 - fixed, 0 - needs to be estimated}
 #'
@@ -56,24 +56,13 @@
 #'
 #'   \describe{
 #'
-#'   \item{Strain}{Virus strain}
-#'
-#'   \item{X}{X-coordinate}
-#'
-#'   \item{Y}{Y-coordinate}
-#'
-#'   }
-"fonville_map_approx"
-
-#' Strain years
-#'
-#' @format A data frame with the following variables:
-#'
-#'   \describe{
-#'
 #'   \item{strain}{Virus strain}
 #'
-#'   \item{year}{The year it circulated}
+#'   \item{x}{X-coordinate}
+#'
+#'   \item{y}{Y-coordinate}
+#'
+#'   \item{year}{The year the strain circulated}
 #'
 #'   }
-"strain_years"
+"fonville_map"

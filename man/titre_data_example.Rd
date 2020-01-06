@@ -10,7 +10,7 @@
 
   \item{individual}{Subject index}
 
-  \item{samples}{Sample time index}
+  \item{sample}{Sample time index}
 
   \item{virus}{Virus circulation time index}
 
@@ -18,7 +18,7 @@
 
   \item{run}{Measurement index}
 
-  \item{DOB}{Date of birth time index}
+  \item{dob}{Date of birth time index}
 
   \item{group}{Group index}
 
