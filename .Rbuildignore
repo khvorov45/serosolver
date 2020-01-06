@@ -1,6 +1,6 @@
 ^doc$
 ^Meta$
-^codemeta\.json$
 ^README\.Rmd$
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^data-raw$
