@@ -18,6 +18,7 @@ test_that("fonville_map is formatted correctly", {
     expect_true(is.integer(epoch))
     expect_true(is.integer(epochs_per_year))
   })
+  expect_equal(length(unique(fonville_map$epochs_per_year)), 1)
 })
 
 test_that("par_tab_base is formatted correctly", {
@@ -43,4 +44,5 @@ test_that("titre_data_example is formatted correctly", {
     expect_true(is.integer(birth_epoch))
     expect_true(is.integer(group))
   })
+  expect_equal(length(unique(titre_data_example$epochs_per_year)), 1)
 })

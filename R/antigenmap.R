@@ -16,12 +16,12 @@
 #' @importFrom dplyr bind_cols
 #'
 #' @export
-predict_antigenic_map <- function(antigenic_map, epochs = NULL) {
+antigenmap_predict <- function(antigenic_map, epochs = NULL) {
 
   # Create prediction data
   if (is.null(epochs))
-    epochs <- antigenic_map$epoch
-  pred_data <- tibble(epoch = epochs)
+    epochs <- as.integer(antigenic_map$epoch)
+  pred_data <- tibble(epoch = as.integer(epochs))
 
   # Fit linear model with multiple outcomes
   mlmfit <- lm(cbind(x, y) ~ epoch, antigenic_map)
@@ -29,5 +29,6 @@ predict_antigenic_map <- function(antigenic_map, epochs = NULL) {
   # Predict from the fit
   pred_xy <- as_tibble(predict(mlmfit, pred_data))
 
+  pred_xy$epochs_per_year <- unique(antigenic_map$epochs_per_year)
   as_tibble(bind_cols(pred_data, pred_xy))
 }

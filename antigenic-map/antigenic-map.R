@@ -21,7 +21,7 @@ pl <- plot_ly(fonville_map, x = ~x, y = ~y, z = ~epoch) %>%
 
 save_plot(pl, "fonville-map") # Fairly flat surface
 
-preds <- predict_antigenic_map(
+preds <- antigenmap_predict(
   fonville_map, epochs = min(fonville_map$epoch):max(fonville_map$epoch)
 )
 
