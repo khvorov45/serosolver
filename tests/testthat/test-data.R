@@ -33,4 +33,14 @@ test_that("titre_data_example is formatted correctly", {
       "logtitre", "run", "birth_epoch", "group"
     )
   )
+  with(titre_data_example, {
+    expect_true(is.integer(individual))
+    expect_true(is.integer(sample_epoch))
+    expect_true(is.integer(virus_epoch))
+    expect_true(is.integer(epochs_per_year))
+    expect_true(is.numeric(logtitre))
+    expect_true(is.integer(run))
+    expect_true(is.integer(birth_epoch))
+    expect_true(is.integer(group))
+  })
 })
