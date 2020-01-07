@@ -33,7 +33,9 @@ BugReports: https://github.com/seroanalytics/serosolver/issues
 Depends: R (>= 3.5.0)
 Imports: 
     Rcpp,
-    tibble
+    tibble,
+    dplyr,
+    stats
 LinkingTo:
     Rcpp
 Suggests:
