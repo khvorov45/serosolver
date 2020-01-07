@@ -35,7 +35,10 @@ Imports:
     Rcpp,
     tibble,
     dplyr,
-    stats
+    stats,
+    magrittr,
+    rlang,
+    glue
 LinkingTo:
     Rcpp
 Suggests:

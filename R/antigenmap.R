@@ -32,3 +32,42 @@ antigenmap_predict <- function(antigenic_map, epochs = NULL) {
   pred_xy$epochs_per_year <- unique(antigenic_map$epochs_per_year)
   as_tibble(bind_cols(pred_data, pred_xy))
 }
+
+#' Lengthen antigenic map
+#'
+#' Takes an antigenic map with a certain number of epochs per year and lengthen
+#' it so that there are more epochs per year
+#'
+#' @param antigenmap A dataframe of antigenic coordinates, with columns
+#'   \code{strain}, \code{x}, \code{y}, \code{epoch} and \code{epochs_per_year}.
+#' @param new_epochs_per_year New epochs per year. Must be greater than
+#'   \code{epochs_per_year} in \code{antigenmap}
+#'
+#' @importFrom dplyr group_by slice mutate ungroup select n row_number .data
+#' @importFrom magrittr "%>%"
+#' @importFrom rlang abort
+#' @importFrom glue glue
+#'
+#' @return The same map but longer
+#' @export
+antigenmap_lengthen <- function(antigenmap, new_epochs_per_year) {
+  cur_ep <- unique(antigenmap$epochs_per_year)
+  if (new_epochs_per_year < cur_ep)
+    abort(glue(
+        "epochs_per_year ({new_epochs_per_year}) must be greater than ",
+        "the map's epochs_per_year ({cur_ep})"
+    ))
+  if (new_epochs_per_year == cur_ep)
+    return(antigenmap)
+  coef <- new_epochs_per_year / cur_ep
+  antigenmap %>%
+    mutate(strain_ind = row_number()) %>%
+    slice(rep(1:n(), each = coef)) %>%
+    group_by(.data$strain_ind) %>%
+    mutate(
+      epoch = .data$epoch * coef - (coef - row_number()),
+      epochs_per_year = new_epochs_per_year
+    ) %>%
+    ungroup() %>%
+    select(-"strain_ind")
+}
