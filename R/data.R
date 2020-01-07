@@ -71,3 +71,48 @@
 #'
 #'   }
 "fonville_map"
+
+#' Default MCMC settings
+#'
+#' @format A named vector with the following variables:
+#'
+#'   \describe{
+#'
+#'   \item{iterations}{}
+#'
+#'   \item{popt}{}
+#'
+#'   \item{popt_hist}{}
+#'
+#'   \item{opt_freq}{}
+#'
+#'   \item{thin}{}
+#'
+#'   \item{adaptive_period}{}
+#'
+#'   \item{save_block}{}
+#'
+#'   \item{thin_hist}{}
+#'
+#'   \item{hist_sample_prob}{}
+#'
+#'   \item{switch_sample}{}
+#'
+#'   \item{burnin}{}
+#'
+#'   \item{inf_propn}{}
+#'
+#'   \item{move_size}{}
+#'
+#'   \item{hist_opt}{}
+#'
+#'   \item{swap_propn}{}
+#'
+#'   \item{hist_switch_prob}{}
+#'
+#'   \item{year_swap_propn}{}
+#'
+#'   \item{propose_from_prior}{}
+#'
+#'   }
+"mcmc_settings_default"

@@ -2,6 +2,7 @@
 
 export(antigenmap_lengthen)
 export(antigenmap_predict)
+export(run_mcmc)
 importFrom(Rcpp,sourceCpp)
 importFrom(dplyr,.data)
 importFrom(dplyr,bind_cols)
