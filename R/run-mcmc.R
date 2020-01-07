@@ -11,5 +11,5 @@
 #'
 #' @export
 run_mcmc <- function(parameters, titres, antigenmap, mcmc_settings) {
-
+  hist_proposal <- 1
 }

@@ -8,39 +8,48 @@
 
   \describe{
 
-  \item{iterations}{}
+  \item{iterations}{How many iterations to run after adaptive period.}
 
-  \item{popt}{}
+  \item{popt}{Desired optimal acceptance rate.}
 
   \item{popt_hist}{}
 
-  \item{opt_freq}{}
+  \item{opt_freq}{How often to adjust step size.}
 
-  \item{thin}{}
+  \item{thin}{Save only every nth iterations for theta sampling.}
 
-  \item{adaptive_period}{}
+  \item{adaptive_period}{How many iterations for adaptive period}
 
-  \item{save_block}{}
+  \item{save_block}{How many post-thinning iterations to store before saving
+  to disk.}
 
-  \item{thin_hist}{}
+  \item{thin_hist}{Save only every nth iterations for infection history
+  sampling.}
 
-  \item{hist_sample_prob}{}
+  \item{hist_sample_prob}{What proportion of infection histories to sample
+  each step.}
 
-  \item{switch_sample}{}
+  \item{switch_sample}{Resample infection histories every n iterations.}
 
-  \item{burnin}{}
+  \item{burnin}{Run this many iterations before attempting adaptation. Idea
+  is to reduce getting stuck in local maxima.}
 
-  \item{inf_propn}{}
+  \item{inf_propn}{Number of infections to move/remove/add in each proposal
+  step.}
 
-  \item{move_size}{}
+  \item{move_size}{Number of infections to move/remove/add in each proposal
+  step.}
 
-  \item{hist_opt}{}
+  \item{hist_opt}{Should infection history proposal step be adaptive?}
 
-  \item{swap_propn}{}
+  \item{swap_propn}{If using gibbs, what proportion of proposals should be
+  swap steps.}
 
-  \item{hist_switch_prob}{}
+  \item{hist_switch_prob}{If using gibbs, what proportion of iterations
+  should be swapping contents of two time periods?}
 
-  \item{year_swap_propn}{}
+  \item{year_swap_propn}{If gibbs and swapping contents, what proportion of
+  these time periods should be swapped?}
 
   \item{propose_from_prior}{}
 

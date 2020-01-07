@@ -8,17 +8,17 @@
 
   \describe{
 
-  \item{name}{Parameter name}
+  \item{name}{Parameter name.}
 
-  \item{value}{Parameter value}
+  \item{value}{Parameter initial value.}
 
-  \item{fixed}{1 - fixed, 0 - needs to be estimated}
+  \item{fixed}{1 - fixed, 0 - needs to be estimated.}
 
-  \item{steps}{Who knows}
+  \item{steps}{How far to step on unit scale to begin with?}
 
-  \item{lower_bound}{Lower bound for value}
+  \item{lower_bound}{Parameters cannot step below this.}
 
-  \item{upper_bound}{Upper bound for value}
+  \item{upper_bound}{Parameters cannot step above this.}
 
   \item{lower_start}{No idea}
 

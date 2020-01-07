@@ -46,3 +46,8 @@ test_that("titre_data_example is formatted correctly", {
   })
   expect_equal(length(unique(titre_data_example$epochs_per_year)), 1)
 })
+
+test_that("mcmc_settings_default is formatted correctly", {
+
+})
+
